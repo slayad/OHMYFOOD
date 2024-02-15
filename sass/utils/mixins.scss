@@ -1,0 +1,28 @@
+@mixin boutton{
+	position: relative;
+	border: none;
+	border-radius: 40px;
+	color: white;
+	padding: 15px 25px;
+	background: $gradient-color;
+	box-shadow: 0 5px 16px #c6c6c6;
+	transition: 0.3s ease-in-out;
+	opacity: 1;
+	cursor: pointer;
+	z-index: 1;
+}
+
+@mixin boutton-after{
+	content: "";
+	position: absolute;
+	border: none;
+	border-radius: 40px;
+	background: white;
+	opacity: 1;
+	height: 46px;
+}
+
+@mixin overflow{
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

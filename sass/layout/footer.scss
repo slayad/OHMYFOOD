@@ -1,0 +1,50 @@
+.footer {
+	padding: 5%;
+	background-color: #353535;
+	&__logo {
+		font-size: 20px;
+		font-family: "shrikhand", cursive;
+		color: white;
+		font-weight: 400;
+		margin-bottom: 20px;
+		margin-top: 15px;
+	}
+	&__list {
+		padding-left: 0;
+	}
+}	
+.footer__list__item__link {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+  height: 30px;
+
+	i {
+		position: relative;
+		border-radius: 0;
+		background-color: transparent;
+		font-size: 14px;
+		margin-right: 14px;
+	}
+
+}
+.footer__list__item {
+	display: inline;
+
+}
+.icone-text {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+  	height: 30px;
+
+}
+
+
+.link__text{
+  padding-bottom: 0;
+}
