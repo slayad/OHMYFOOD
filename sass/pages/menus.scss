@@ -1,0 +1,240 @@
+.nav {
+	.icon-arrow {
+		position: absolute;
+		height: 100%;
+		width: 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		top: 27px;
+		left: 24px;
+		font-size: 1.3em;
+	}
+}
+.image-wrapper {
+	img {
+		position: relative;
+		max-height: 18rem;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+.menu-title {
+	font-size: 30px;
+	font-family: "shrikhand", cursive;
+	font-weight: 400;
+	margin-bottom: 0;
+	margin-left: 15px;
+}
+.main--menu {
+	.menu__content {
+		background-color: #f6f6f6;
+		border-radius: 30px 30px 0 0;
+		padding-bottom: 15px;
+		position: relative;
+		margin-top: -4rem;
+	}
+}
+.menu__content {
+	height: 100%;
+}
+.main-header2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 18px;
+	background-color: transparent;
+	padding-bottom: 0%;
+}
+.icon-heart {
+		height: 2rem;
+		width: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		position: relative;
+		margin-top: 24px;
+		margin-right: 40px;
+
+	i {
+		font-size: 1.5em;
+	}
+  .heart-full{
+    opacity: 0;
+    transition-duration: 1s;
+	position: absolute;
+
+  }
+
+  .heart-full:hover{
+    opacity: 1;
+    color: transparent;
+    background-image:$gradient-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+  }
+}
+.title-apetizer {
+	padding-top: 20px;
+
+h3 {
+	font-size: 1.3rem;
+	font-weight: 100;
+    padding-bottom: 5px;
+	position: relative;
+	margin-left: 14px;
+
+	
+    &::after{ 
+    content: "";
+    background-color:#99E2D0;
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+	margin-top: 30px;
+  }
+}  
+}
+
+.apetizer{
+	max-width: 100%;
+	overflow: hidden;
+} 
+
+.list-apetizer{
+	margin: 0 1em;
+
+}
+
+.card__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	border-radius: 1rem;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 0 10px;
+	height: 69px;
+	overflow: hidden;
+	cursor: pointer;
+	animation: appear 1s;
+	animation-fill-mode: both;
+
+	&__text{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	&__text__info {
+		font-size: 1em;
+		font-weight: 100;
+		margin-top: 5px;
+		margin-bottom: 0;
+		@include overflow;
+  	}
+
+	&__text__title {
+		font-size: 1.2rem;
+		margin: 0 0 4px 0;
+		@include overflow;
+	}
+
+	&__price {
+		display: flex;
+		font-weight: 700;
+		margin-top: 33px;
+		transition: 0.5s;
+		padding: 1rem;
+		z-index: 1;
+		transition: .5s ease-in-out;
+
+	}
+	&__icon-check {
+		background-color: $green-clear;
+		width: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0 1rem 1rem 0;
+		text-align: center;
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 20px;
+		padding: 23px 0;
+		transform: translateX(64px);
+		transition: .5s ease-in-out;
+		
+		i{
+			color: #f6f6f6;
+			font-size: 1.5rem;
+		}
+	}
+
+	&:hover {
+		.card__content__price{
+			margin-right: 60px;
+		}		
+		.card__content__icon-check {
+			transform: translateX(0);
+		}
+	}
+}
+
+.apetizer-card {
+	display: flex;
+	flex-direction: column;
+	margin: 16px 0;
+}
+
+@for $i from 0 to 9 {
+	.delay-#{$i} {
+		animation-delay: #{$i/10}s;
+	}
+}
+
+.btn-menu {
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+	button {
+		@include boutton;
+		width: 159px;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	&::after{
+		@include boutton-after;
+		width: 159px;
+	}
+}
+
+.loader{
+	background-color: white;
+	height: 100vh;
+	position: fixed;
+	z-index: 2;
+	inset: 0;
+	opacity: 0.9;
+	animation: loader 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	display: grid;
+	place-items: center;
+	i{
+		font-size: 70px;
+		animation: shrump 1s infinite linear;
+		color: $pink;
+		border: 7px solid;
+		border-color: $green-clear;		
+		border-radius: 70px;
+		padding: 30px;
+	}
+}
+
