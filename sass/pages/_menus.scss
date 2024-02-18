@@ -238,3 +238,42 @@ h3 {
 	}
 }
 
+
+
+@media (min-width: 950px) {
+	.image-wrapper {
+		img {
+			min-height: 40rem;
+		}
+	}
+
+	.main-header2 {
+	display: flex;
+	justify-content: center;
+	}
+
+
+	.icon-heart{
+		margin-left: 26px;
+	}
+
+	.container-menu{
+		margin: 0 15%;
+	}
+
+	.card__content__text__info{
+		width: 100%;
+  	}
+
+	.card-subtitle {
+		margin-top: 3px;
+	}
+
+	.menu__content {
+		margin: 0 150px;
+	}
+
+
+
+}
+

@@ -50,3 +50,21 @@ header {
 		width: 196px;
 	}	
 }
+
+
+
+
+@media (min-width: 950px) {
+
+
+	.location{
+		box-shadow: none;
+	}
+	.header-title{
+		box-shadow: none;
+
+	}
+		.header-title h1{
+			font-size: 40px;
+		}
+}

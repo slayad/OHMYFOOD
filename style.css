@@ -1,28 +1,3 @@
-@keyframes appear {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes loader {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes shrump {
-  to {
-    transform: rotate(360deg);
-  }
-  from {
-    transform: rotate(0deg);
-  }
-}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -42,32 +17,6 @@ body {
   color: #000000;
   margin: 0;
   padding-top: 20px;
-}
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-.logo img {
-  height: 36px;
-  width: 197px;
-}
-
-.location {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  background-color: #eaeaea;
-  font-size: 18px;
-  font-weight: 600;
-  -moz-column-gap: 18px;
-  column-gap: 18px;
-  box-shadow: inset 1px 3px 9px -7px #3a3838;
 }
 
 header {
@@ -92,6 +41,21 @@ header {
 .header-title p {
   padding: 0 11%;
   font-weight: 100;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+  font-size: 18px;
+  font-weight: 600;
+  -moz-column-gap: 18px;
+  column-gap: 18px;
+  box-shadow: inset 1px 3px 9px -7px #3a3838;
 }
 
 .btn-explore {
@@ -126,57 +90,26 @@ header {
   width: 196px;
 }
 
-.fonctionnement {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: white;
+@media (min-width: 950px) {
+  .location {
+    box-shadow: none;
+  }
+  .header-title {
+    box-shadow: none;
+  }
+  .header-title h1 {
+    font-size: 40px;
+  }
 }
-.fonctionnement__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-}
-.fonctionnement-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  border-radius: 20px;
-  background-color: #f6f6f6;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-.fonctionnement .index {
-  position: relative;
-  right: 12px;
-  height: 24px;
-  width: 24px;
-  border-radius: 100%;
+.logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  background-color: #9356DC;
-  color: white;
+  margin-bottom: 15px;
 }
-.fonctionnement .icone-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  width: 50px;
-  font-size: 24px;
-  color: #7e7e7e;
-}
-.fonctionnement-txt {
-  font-weight: 500;
+.logo img {
+  height: 36px;
+  width: 197px;
 }
 
 .restaurants {
@@ -268,6 +201,25 @@ header {
   -webkit-background-clip: text;
 }
 
+@media (min-width: 950px) {
+  .restaurant-content {
+    margin: 0 10% 0 10%;
+  }
+  .restaurants {
+    padding: 0 0 30px 0;
+  }
+  .restaurants-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+  }
+  .card {
+    margin: 0;
+  }
+  .card img {
+    height: 250px;
+  }
+}
 .footer {
   padding: 5%;
   background-color: #353535;
@@ -317,7 +269,117 @@ header {
   padding-bottom: 0;
 }
 
-/******* la palette du gout *****/
+@media (min-width: 950px) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 30px 30px 0px 30px;
+  }
+  .footer__logo {
+    padding-left: 100px;
+    padding-right: 50px;
+  }
+  .footer__list__item {
+    padding-right: 30px;
+  }
+  .footer__list__item__link {
+    align-items: center;
+  }
+}
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+}
+.fonctionnement__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.fonctionnement-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.fonctionnement .index {
+  position: relative;
+  right: 12px;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background-color: #9356DC;
+  color: white;
+}
+.fonctionnement .icone-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 50px;
+  font-size: 24px;
+  color: #7e7e7e;
+}
+.fonctionnement-txt {
+  font-weight: 500;
+}
+
+@media (min-width: 950px) {
+  .fonctionnement {
+    margin: 0 10% 0 10%;
+    padding: 0;
+  }
+  .fonctionnement__list {
+    flex-direction: row;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes shrump {
+  to {
+    transform: rotate(360deg);
+  }
+  from {
+    transform: rotate(0deg);
+  }
+}
 .nav .icon-arrow {
   position: absolute;
   height: 100%;
@@ -592,44 +654,7 @@ header {
   padding: 30px;
 }
 
-/******* responsive *****/
 @media (min-width: 950px) {
-  .location {
-    box-shadow: none;
-  }
-  .header-title {
-    box-shadow: none;
-  }
-  .header-title h1 {
-    font-size: 40px;
-  }
-  .fonctionnement {
-    margin: 0 10% 0 10%;
-    padding: 0;
-  }
-  .fonctionnement__list {
-    flex-direction: row;
-    -moz-column-gap: 25px;
-    column-gap: 25px;
-  }
-  .restaurant-content {
-    margin: 0 10% 0 10%;
-  }
-  .restaurants {
-    padding: 0 0 30px 0;
-  }
-  .restaurants-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 70px;
-  }
-  .card {
-    margin: 0;
-  }
-  .card img {
-    height: 250px;
-  }
-  /******* menus *****/
   .image-wrapper img {
     min-height: 40rem;
   }
@@ -651,25 +676,5 @@ header {
   }
   .menu__content {
     margin: 0 150px;
-  }
-  .footer__list {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    padding: 30px 30px 0px 30px;
-  }
-  .footer__logo {
-    padding-left: 100px;
-    padding-right: 50px;
-  }
-  .footer__list__item {
-    padding-right: 30px;
-  }
-  .footer__list__item__link {
-    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */

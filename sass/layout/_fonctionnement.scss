@@ -53,3 +53,18 @@
 		font-weight: 500;
 	}
 }
+
+
+@media (min-width: 950px) {
+	
+	.fonctionnement {
+		margin: 0 10% 0 10%;
+		padding: 0;
+
+	&__list {
+		flex-direction: row;
+		-moz-column-gap: 25px;
+		column-gap: 25px;
+	}
+}
+}

@@ -88,3 +88,25 @@
     -webkit-background-clip: text;
   }
 }
+
+
+@media (min-width: 950px) {
+
+	.restaurant-content {
+		margin: 0 10% 0 10%;
+	}
+	.restaurants {
+		padding: 0 0 30px 0;
+	}
+	.restaurants-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 70px;
+	}
+	.card {
+		margin: 0;
+		img {
+			height: 250px;
+		}
+	}
+}

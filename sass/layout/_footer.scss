@@ -48,3 +48,29 @@
 .link__text{
   padding-bottom: 0;
 }
+
+
+
+
+@media (min-width: 950px) {
+	.footer__list {
+		display: flex;
+		flex-direction: row;
+	}
+	.footer {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		padding: 30px 30px 0px 30px;
+	}
+	.footer__logo {
+		padding-left: 100px;
+		padding-right: 50px;
+	}
+	.footer__list__item {
+		padding-right: 30px;
+	}
+	.footer__list__item__link {
+		align-items: center;
+	}
+}
